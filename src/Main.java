@@ -2,7 +2,7 @@
 void main() {
 
     Persoa p1 = new Persoa();
-    Persoa p2 = new Persoa("Manuel","44556U",45);
+    Persoa p2 = new Persoa("Manuel","44556U",45,0);
     System.out.println(p1.nome);
     System.out.println(p2.nome);
     MembroComunidadeEscolar m1 = new MembroComunidadeEscolar("Juan","5423",18,36205,"DanielCastelao");
@@ -29,6 +29,28 @@ void main() {
 
     if (cad3.equals(cad4)) System.out.println("As cadeas son iguales");
     else System.out.println("As cadeas non son iguais");
+
+    // boletin vectoresJava 9
+
+    int taboa[] = {1,2, 2 ,3 ,9, 8, 2, 5, 4, 4, 6};
+    int taboaAux [] = new int [taboa.length];
+    Arrays.sort(taboa);
+    taboaAux [0]= taboa[0];
+    int punteiro = 0;
+    for (int k=1; k<taboa.length; k++){
+        int resultado = Arrays.binarySearch(taboaAux, taboa[k]);
+        if (resultado < 0) {
+            punteiro++;
+            taboaAux [punteiro] = taboa[k];
+        }
+    }
+
+    taboa = Arrays.copyOf(taboaAux,punteiro+1);
+    System.out.println("{");
+    for (int n: taboa) {
+        System.out.println(n+", ");
+    }
+    System.out.println("}");
 
 }
 

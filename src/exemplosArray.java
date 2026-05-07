@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class exemplosArray {
 
     public static void  main (String[] args){
@@ -24,16 +26,19 @@ public class exemplosArray {
 
         Persoa [] equipo;
         equipo =  new Persoa[5];
-        equipo [0] = new Persoa("Ramón","4425E",22);
-        equipo [1] = new Persoa("Mario","8527U",21);
-        equipo [2] = new Persoa("Juan","9374A",23);
-        equipo [3] = new Persoa("Fran","4599C",28);
-        equipo [4] = new Persoa("Pepe","5482B",23);
+        equipo [0] = new Persoa("Ramón","4425E",22,0);
+        equipo [1] = new Persoa("Mario","8527U",21,0);
+        equipo [2] = new Persoa("Juan","9374A",23,0);
+        equipo [3] = new Persoa("Fran","4599C",28,0);
+        equipo [4] = new Persoa("Pepe","5482B",23,0);
 
 
 
         System.out.println("Numero de letras total: " + ((equipo[0].nome.length()) + (equipo[1].nome.length()) + (equipo[2].nome.length()) + (equipo[3].nome.length()) + (equipo[4].nome.length())));
         System.out.println("Media de edad: " + ( (equipo[0].edade) + (equipo[1].edade) + (equipo[2].edade) + (equipo[3].edade) + (equipo[4].edade)) / 5);
+
+        int t[] = {1,2,3,4,5};
+        int a[] = Arrays.copyOf(t,3);
 
 
 
