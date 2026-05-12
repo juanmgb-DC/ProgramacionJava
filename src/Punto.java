@@ -33,7 +33,6 @@ public abstract class Punto {
    }
 
    public static void main (String[] args) {
-       Punto p1 = new Punto(1, 2);
    }
 
 }
